@@ -1,5 +1,5 @@
-title: Article Format Template
-author: Christophe Dervieux
+title: REGION
+author: Gunther Maier, Christophe Dervieux
 version: 0.1.0
 contributes:
   formats:
@@ -16,7 +16,7 @@ contributes:
           echo: false
     pdf:
       # define default configuration for the pdf version of your format
-      documentclass: aft
+      documentclass: article
       colorlinks: true
       urlcolor: red
       fig-width: 6.5
@@ -28,7 +28,7 @@ contributes:
       # biblio-config: false
       # Content to add in header that your format is using
       header-includes: |
-        \usepackage{orcidlink}
+        \usepackage{hyperref}
         \definecolor{mypink}{RGB}{219, 48, 122}
       template-partials:
         # Add here the partials your format is using
@@ -36,8 +36,7 @@ contributes:
         - "partials/_authors.tex"
       format-resources:
         # Add here the resources required for the PDF rendering
-        - aft.cls
-        - te.bst
+        - region.bst
     html:
       # define default configuration for the html version of your format
       number-sections: true
