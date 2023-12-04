@@ -33,7 +33,7 @@ contributes:
       # Content to add in header that your format is using
       number-sections: true
       header-includes: |
-        \usepackage{_extensions/REGION/region,hyperref,multirow}
+        \usepackage{_extensions/gunthermaier/REGION/region,hyperref,multirow}
         \definecolor{mypink}{RGB}{219, 48, 122}
       template-partials:
         # Add here the partials your format is using
