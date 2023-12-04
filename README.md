@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Article Format Template (AFT)
 
 This is a Quarto template that assists you in creating a manuscript for
