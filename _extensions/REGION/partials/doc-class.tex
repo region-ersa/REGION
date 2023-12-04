@@ -12,7 +12,19 @@ $if(fontsize)$
   $fontsize$,
 $endif$
 $if(papersize)$
-  $papersize$paper,
+  $papersize$paper, 
+$else$
+  a4paper,  
+$endif$
+$if(docsided)$
+  $docsided$,
+$else$
+  twoside,
+$endif$
+$if(docstatus)$
+  $docstatus$
+$else$
+  final
 $endif$
 $if(beamer)$
   ignorenonframetext,

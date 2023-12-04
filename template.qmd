@@ -1,46 +1,50 @@
 ---
-title: "Demo aft format to use as template"
+title: "Demo REGION format to use as template"
 format:
-  aft-pdf:
-    keep-tex: true  
-  aft-html: default
+  REGION-pdf:
+    keep-tex: true
+    pdf-engine: pdflatex
+    docstatus: final
+  REGION-html: default
 author:
-  - name: John Doe
+  - name: Gunther Maier
     affiliations:
-      - name: Dummy org
-        department: Cool Dep
-        address: Somewhere
-        city: Magic city
-        country: best one
-        postal-code: 9999
-      - Demo Journal
-    orcid: 0000-0000-0000-0000
-    email: JD@example.org
-    url: https://example.org/
-  - name: his friend
+      - name: Modul University
+        city: Vienna
+        country: Austria
+  - name: Francisco Rowe
     affiliations:
-      - Another Affiliation
+      - name: University of Liverpool
+        city: Liverpool
+        country: United Kingdom
 abstract: |
   This document is only a demo explaining how to use the template.
-keywords: [template, demo]
-reference-section-title: References
+keywords: [template, demo, region]
 bibliography: bibliography.bib  
+#ojsnum: 555
+#jvol: 11
+#jnum: 1
+#jpages: 100--200
+#jyear: 2024
+#jauthor: G.\ Maier, F.\ Rowe
+#received: January 1, 2024
+#accepted: January 2, 2024
 ---
 
-## Introduction {#sec-intro}
+# Introduction {#sec-intro}
 
 This is a dummy example only for the purpose to use this repo as a template starter for creating new formats.  For this `article-format-template` we call our dummy article `aft`. 
 
 This quarto extension format supports PDF and HTML outputs. `quarto-journals` is aiming at porting existing {{< latex >}} template from journals to be used with quarto. PDF format is what require the most work to fit the journals guideline, but Quarto offer a nice rendering for HTML output too. This demo format template only use basic HTML format without any customization for now.
 
-## About Quarto Extensions formats And Quarto Journals Article
+# About Quarto Extensions formats And Quarto Journals Article
 
 First, please get familiar with the following resources: 
 
 - [Creating Formats](https://quarto.org/docs/extensions/formats.html) in Quarto as part of the [Extensions](https://quarto.org/docs/extensions/) mechanism.
 - [Journals Articles](https://quarto.org/docs/journals/) for Quarto.
 
-## Structure of this repository
+# Structure of this repository
 
 Everything for the extensions is in `_extensions`. See Quarto doc for details. 
 
@@ -53,7 +57,7 @@ Everything for the extensions is in `_extensions`. See Quarto doc for details.
 Source repository for this template format can found on [Github](https://github.com/quarto-journals/article-format-template)
 
 
-### `_extensions\aft` 
+## `_extensions\aft` 
 
 In this folder you'll find everything that defines the extensions which could be installed using `quarto install extension` or be part of the template when using `quarto use template`
 
@@ -121,7 +125,7 @@ Other files
 
 {{< pagebreak >}}
 
-## Checklist: Creating a custom format
+# Checklist: Creating a custom format
 
 Here is the checklist to help you know what to modify:
 
@@ -137,15 +141,15 @@ Here is the checklist to help you know what to modify:
 - Check `.quartoignore` is updated which everything that should not be downloaded.
 - Publish a demo of you format to github pages of the repo by using `quarto publish` command 
 
-## Demo of some features found in this demo journal template
+# Demo of some features found in this demo journal template
 
-### Shortcode demo {#sec-shortcode}
+## Shortcode demo {#sec-shortcode}
 
 PDF are rendered using {{< latex >}} but it is best if one can use a Markdown syntax for cross format support.
 
 `{{< latex >}}` used in source is a shortcode syntax where the shortcode is included in the extension folder `_extensions`
 
-### Code chunk {#sec-chunks}
+## Code chunk {#sec-chunks}
 
 This format hide chunks by default as option has been set in `_extension.yml` file.
 
@@ -163,7 +167,7 @@ m_pois <- glm(Days ~ (Eth + Sex + Age + Lrn)^2, data = quine, family = poisson)
 summary(m_pois)
 ```
 
-### Text color {#sec-summary}
+## Text color {#sec-summary}
 
 Our format makes applying color on inline text possible using the `[content]{color=<name>}` syntax. Let's see an example.
 
@@ -171,7 +175,7 @@ Here we are using a special feature of our format which is the coloring because 
 
 This is possible thanks to the Lua Filter included in the custom extension format.
 
-### Using references {.unnumbered}
+## Using references {.unnumbered}
 
 I did not read this book [@CameronTrivedi2013] but it must be interesting. 
 

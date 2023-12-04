@@ -18,5 +18,24 @@ $if(subtitle)$
 \makeatother
 \subtitle{$subtitle$}
 $endif$
-\author{${ by-author:_authors.tex()[\and ] }}
+\author{%${by-author:_authors.tex()[, ] }}
 \date{$date$}
+
+\setcounter{page}{999}
+\renewcommand{\thepage}{\arabic{page}}  % L for Letters, R for Resources, E for Editorial
+$if(jvol)$\jvol{$jvol$}$else$\jvol{1}$endif$ 
+$if(jnum)$\jnum{$jnum$}$else$\jnum{1}$endif$ 
+$if(jyear)$\jyear{$jyear$}$else$\jyear{2020}$endif$ 
+$if(jpages)$\jpages{$jpages$}$else$\jpages{999--999}$endif$ 
+$if(jauthor)$\jauthor{$jauthor$}$else$\jauthor{MISSING}$endif$ 
+$if(received)$\received{$received$}$else$\received{}$endif$ 
+$if(accepted)$\accepted{$accepted$}$else$\accepted{}$endif$ 
+
+$if(ojsnum)$\jdoi{10.18335/region.v$jvol$i$jnum$.$ojsnum$}$else$\jdoi{10.18335/region.v??i??.???}$endif$ 
+
+\setlength{\parskip}{0pt plus1pt}
+\setlength{\parindent}{15pt}
+
+% %\bibliographystyle{plainnat}
+\bibpunct{(}{)}{,}{a}{}{,}   % % changes formatting in natbib, see http://merkel.zoneo.net/Latex/natbib.php
+% % It can be moved into the package call!
