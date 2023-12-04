@@ -107,7 +107,7 @@ This standard option defines the abstract.
 This standard option defines the name of the bib-file that contains the
 bibliography.
 
-## ------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ### Options for the production editor
 
@@ -116,7 +116,7 @@ production of the final PDF-document. The author can set these options
 for testing purposes, but should be aware that they will be changed in
 production editing. The options for the production editor are the following:
 
-## ------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ### `ojsnum`
 
