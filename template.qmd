@@ -5,7 +5,9 @@ format:
     keep-tex: true
     pdf-engine: pdflatex
     docstatus: final
-  REGION-html: default
+  REGION-html:
+    toc: false
+    format-links: false
 author:
   - name: Gunther Maier
     affiliations:

@@ -29,7 +29,7 @@ contributes:
       cite-method: natbib
       # Set this below (`biblio-config: false`) if your cls already load a bst file
       # biblio-config: false
-      # reference-section-title: ReReferences
+      # reference-section-title: References
       # Content to add in header that your format is using
       number-sections: true
       header-includes: |
@@ -44,6 +44,7 @@ contributes:
       format-resources:
         # Add here the resources required for the PDF rendering
         - region.bst
+        - region.sty
     html:
       # define default configuration for the html version of your format
       number-sections: true
