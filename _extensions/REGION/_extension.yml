@@ -45,6 +45,11 @@ contributes:
         # Add here the resources required for the PDF rendering
         - region.bst
         - region.sty
+        - ERSA_logo.png
+        - fwf.pdf
+        - Titlepage_21.pdf
+        - Titlepage_22.pdf
+        - wutext.pdf
     html:
       # define default configuration for the html version of your format
       number-sections: true
