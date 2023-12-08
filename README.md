@@ -1,34 +1,57 @@
 # Article Format Template (AFT)
 
-This is a Quarto template that assists you in creating a manuscript for
-REGION. You can learn more about REGION as <https://region.ersa.org>
+This repository contains a Quarto template that assists you in creating a manuscript for
+REGION. The lines below describes how to use this repository. 
+
+You can learn more about REGION at <https://region.ersa.org>
+
+## Starting a New Quarto Project
+
+As a first step, we recommend creating a new quarto project using RStudio. Go to "File" > "New Project" and follow the prompt.
 
 ## Creating a New Article
 
-You can use this as a template to create an article for REGION. To do
-this, use the following command:
+Next, use our template to create an article for REGION. To do
+this, use the following command on the terminal on RStudio:
 
 ``` bash
 quarto use template gunthermaier/REGION
 ```
+After you run this, you will be asked:
 
-This will install the extension and create an example qmd file and
-bibiography that you can use as a starting place for your article.
+``` bash
+? Do you trust the authors of this template (Y/n)
+```
+Type "Y" and:
+
+``` bash
+? Directory name:
+```
+Type the directory where you would like to store the template.
+
+These lines will install the extension and create an example qmd file and
+bibliography that you can use as a starting place for your article.
 
 ## Installation For Existing Document
 
-You may also use this format with an existing Quarto project or
-document. From the quarto project or document directory, run the
-following command to install this format:
+Next, run the following command from the terminal to install this format:
 
 ``` bash
 quarto add gunthermaier/REGION
 ```
+After running this command, you will be asked:
+
+``` bash
+? Do you trust the authors of this extension (Y/n) ›
+ ? Would you like to continue (Y/n) ›
+```
+
+Type "Y" to both questions.
 
 ## Usage
 
-To use the format, you can use the format names `REGION-pdf` and
-`REGION-html`. For example:
+You should now be able to use our template. For example, if you would like to name your manuscript in qmd labelled `article.qmd` as `REGION-pdf` and
+`REGION-html`, type:
 
 ``` bash
 quarto render article.qmd --to REGION-pdf
