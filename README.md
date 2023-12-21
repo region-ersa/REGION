@@ -9,7 +9,7 @@ You can use this as a template to create an article for REGION. To do
 this, use the following command:
 
 ``` bash
-quarto use template gunthermaier/REGION
+quarto use template region-ersa/REGION
 ```
 
 This will install the extension and create an example qmd file and
@@ -22,7 +22,7 @@ document. From the quarto project or document directory, run the
 following command to install this format:
 
 ``` bash
-quarto add gunthermaier/REGION
+quarto add region-ersa/REGION
 ```
 
 ## Usage
