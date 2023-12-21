@@ -15,7 +15,7 @@ Next, use our template to create an article for REGION. To do
 this, use the following command on the terminal on RStudio:
 
 ``` bash
-quarto use template gunthermaier/REGION
+quarto use template region-ersa/REGION
 ```
 After you run this, you will be asked:
 
@@ -37,7 +37,7 @@ bibliography that you can use as a starting place for your article.
 Next, run the following command from the terminal to install this format:
 
 ``` bash
-quarto add gunthermaier/REGION
+quarto add region-ersa/REGION
 ```
 After running this command, you will be asked:
 
