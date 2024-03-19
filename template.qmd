@@ -179,7 +179,7 @@ This is possible thanks to the Lua Filter included in the custom extension forma
 
 ## Using references {.unnumbered}
 
-I did not read this book [@CameronTrivedi2013] but it must be interesting. 
+You can cite a book by typing @CameronTrivedi2013 or a research article @rowe2023urban. 
 
 Differences between `aft-html` and `aft-pdf`: 
 
