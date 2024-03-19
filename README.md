@@ -5,10 +5,6 @@ REGION. The lines below describes how to use this repository.
 
 You can learn more about REGION at <https://region.ersa.org>
 
-## Starting a New Quarto Project
-
-As a first step, we recommend creating a new quarto project using RStudio. Go to "File" > "New Project" and follow the prompt.
-
 ## Creating a New Article
 
 Next, use our template to create an article for REGION. To do
@@ -43,27 +39,32 @@ After running this command, you will be asked:
 
 ``` bash
 ? Do you trust the authors of this extension (Y/n) ›
- ? Would you like to continue (Y/n) ›
 ```
 
-Type "Y" to both questions.
+Type "Y".
+
+``` bash
+? Would you like to continue (Y/n) ›
+```
+
+Type "Y".
+
+``` bash
+? View documentation using default browser? (Y/n) ›
+```
+
+Type "n"
 
 ## Usage
 
-You should now be able to use our template. For example, if you would like to name your manuscript in qmd labelled `article.qmd` as `REGION-pdf` and
-`REGION-html`, type:
+Go to the directory where you saved the template and use the qmd file you will find there. 
+
+Open this file in RStudio and render it.
+
+You can render it by clicking "Render" or by typing:
 
 ``` bash
-quarto render article.qmd --to REGION-pdf
-```
-
-or in your document yaml
-
-``` yaml
-format:
-  pdf: default
-  REGION-pdf:
-    keep-tex: true    
+quarto render [.qmd file] --to [.pdf file]
 ```
 
 You can view a preview of the rendered template at
