@@ -6,6 +6,7 @@ $-- %%%% TODO %%%%%
 $-- Customize is needed, like below for printing the authors. Otherwise remove this partials to use Quarto default one.
 $-- %%%%%%%%%%%%%%%%
 
+
 $if(title)$
 \title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
@@ -39,3 +40,27 @@ $if(ojsnum)$\jdoi{10.18335/region.v$jvol$i$jnum$.$ojsnum$}$else$\jdoi{10.18335/r
 % %\bibliographystyle{plainnat}
 \bibpunct{(}{)}{,}{a}{}{,}   % % changes formatting in natbib, see http://merkel.zoneo.net/Latex/natbib.php
 % % It can be moved into the package call!
+
+%%%%%%%%%%% GM inserted %%%%%%%%%%%%%%%
+\usepackage[breakable]{tcolorbox}
+
+% prompt
+\makeatletter
+\newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+\makeatother
+\newcommand{\prompt}[4]{
+	\ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}
+}
+
+\definecolor{incolor}{HTML}{303F9F}
+\definecolor{outcolor}{HTML}{D84315}
+\definecolor{cellborder}{HTML}{CFCFCF}
+\definecolor{cellbackground}{HTML}{F7F7F7}
+\definecolor{celloutborder}{HTML}{FFAFAF}
+\definecolor{celloutbackground}{HTML}{F7E7E7}
+
+\newcounter{code}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{ROutput}{\definecolor{shadecolor}{HTML}{F7E7E7}\begin{snugshade}}{\end{snugshade}}
+\newenvironment*{RInput}{}{}

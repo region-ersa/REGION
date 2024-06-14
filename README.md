@@ -197,3 +197,15 @@ The date when the article was accepted by REGION for publication (e.g.,
 January 2, 2024)
 
 ------------------------------------------------------------------------
+
+# Code chunk formatting
+
+The template also applies two lua-filters that wrap code chunk input and 
+output into special formatting. In the standard PDF-output, input elements
+show a grey background, output elements a reddish background. The template
+also provides a PERL-script named `adjust_code_tex.pl` that changes this
+formatting to the type of code chunk formatting we need for REGION. With
+a PERL interpreter available, just call this script, specify input and 
+output file (both tex-files), and compile the output tex-file to PDF. For
+more details see the comments in `adjust_code_tex.pl`. The script also 
+makes some other small adjustments.
